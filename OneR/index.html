@@ -187,6 +187,14 @@
                     For object localization, we do not rely on any specific algorithms like Grad-CAM, but simply computes patch-text embedding similarities and visualize the highlighted regions. Figure below presents a more vivid comparison with competitive baselines, which employ grad-cam as patch-level similarity operation yields highly unreasonable results.
                 </p>
                 <image src="img/OneR_compare.png" class="img-responsive" alt="overview">
+                <p>
+                    More than that, as OneR learns a single representation space for both vision and language modalities, it shows better cross-modal transfer (benefits in one modality performance after additional training in the other modality) than the baseline.
+                </p>
+                <image src="img/OneR_tab.png" class="img-responsive" alt="overview" width="40%">
+                    <p>
+                        Above all, OneR records highly comparable results on traditional benchmarks like COCO retrieval even with no initialization prior and significantly less number of parameters.
+                    </p>
+                    <image src="img/OneR_tab2.png" class="img-responsive" alt="overview" width="90%">
             </div>
         </div>
 
