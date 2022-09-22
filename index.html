@@ -25,6 +25,11 @@
               <p>
                 Previously, I did my undergrad at <a href="https://en.snu.ac.kr">SNU</a> (business and statistics double-major), where I worked with <a href="https://datalab.snu.ac.kr/~ukang/">U Kang</a> and <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
               </p>
+              <br>
+              <p>
+                I'm currently interested in leveraging the knowledge of foundational models for diverse downstream tasks, such as generative modeling, video understanding and 3D scene representations.
+              </p>
+
               <p style="text-align:center">
                 <a href="mailto:rin4616@gmail.com">Email</a> &nbsp/&nbsp
 <!--                <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp-->
@@ -41,10 +46,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-                I'm interested in computer vision, machine learning, optimization, and image processing. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images. Representative papers are <span class="highlight">highlighted</span>.
-              </p>
+              <heading>Published</heading>
             </td>
           </tr>
         </tbody></table>
@@ -52,38 +54,24 @@
           <tr onmouseout="malle_stop()" onmouseover="malle_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='malle_image'>
-                  <img src='images/MalleConv_after.jpg' width="160"></div>
-                <img src='images/MalleConv_before.jpg' width="160">
+                <img src='images/mixdl_overview.png' width="160">
               </div>
-              <script type="text/javascript">
-                function malle_start() {
-                  document.getElementById('malle_image').style.opacity = "1";
-                }
-
-                function malle_stop() {
-                  document.getElementById('malle_image').style.opacity = "0";
-                }
-                malle_stop()
-              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://yifanjiang.net/MalleConv.html">
-                <papertitle>Fast and High-quality Image Denoising via Malleable Convolutions</papertitle>
+                <papertitle>Few-shot Image Generation with Mixup-based Distance Learning</papertitle>
               </a>
               <br>
-              <a href="https://yifanjiang.net/">Yifan Jiang</a>,
-              <a href="https://bartwronski.com/">Bartlomiej Wronski</a>, 
-							<a href="https://bmild.github.io/">Ben Mildenhall</a>, <br>
-              <strong>Jonathan T. Barron</strong>,
-              <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/">Zhangyang Wang</a>,
-              <a href="https://people.csail.mit.edu/tfxue/">Tianfan Xue</a>
+              <strong>Chaerin Kong</strong>,
+              <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/">Jeesoo Kim</a>,
+              <a href="https://people.csail.mit.edu/tfxue/">Donghoon Han</a>,
+              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>
               <br>
               <em>ECCV</em>, 2022
               <br>
-              <a href="https://yifanjiang.net/MalleConv.html">project page</a>
+              <a href="https://github.com/reyllama/mixdl">code</a>
               /
-              <a href="https://arxiv.org/abs/2201.00392">arXiv</a>
+              <a href="https://arxiv.org/abs/2111.11672">arXiv</a>
               <p></p>
               <p>
               We denoise images efficiently by predicting spatially-varying kernels at low resolution and using a fast fused op to jointly upsample and apply these kernels at full resolution.
