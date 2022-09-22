@@ -123,14 +123,12 @@
                 <h3>
                     Abstract
                 </h3>
-                <image src="img/pipeline.jpeg" class="img-responsive" alt="overview"><br>
+                <image src="img/eccv_main.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                    Contrastive learning is a form of distance learning that aims to learn invariant features from two related representations. In this paper, we explore the bold hypothesis that
-                    an image and its caption can be simply regarded as two different views of the underlying mutual information, and train a model to learn a unified vision-language representation
-                    space that encodes both modalities at once in a modality-agnostic manner. We first identify difficulties in learning a generic one-tower model for vision-language pretraining (VLP),
-                    and propose OneR as a simple yet effective framework for our goal. We discover intriguing properties that distinguish OneR from the previous works that learn modality-specific representation
-                    spaces such as zero-shot object localization, text-guided visual reasoning and multi-modal retrieval, and present analyses to provide insights into this new form of multi-modal representation learning.
-                    Thorough evaluations demonstrate the potential of a unified modality-agnostic VLP framework.
+                    Producing diverse and realistic images with generative models such as GANs typically requires large scale training with vast amount of images. GANs trained with limited data can easily memorize few training samples and display undesirable properties
+                    like stairlike latent space where interpolation in the latent space yields discontinuous transitions in the output space. In this work, we consider a challenging task of pretraining-free few-shot image synthesis, and seek to train existing generative
+                    models with minimal overfitting and mode collapse. We propose mixup-based distance regularization on the feature space of both a generator and the counterpart discriminator that encourages the two players to reason not only about the scarce observed
+                    data points but the relative distances in the feature space they reside. Qualitative and quantitative evaluation on diverse datasets demonstrates that our method is generally applicable to existing models to enhance both fidelity and diversity under few-shot setting.
                 </p>
             </div>
         </div>
