@@ -159,8 +159,37 @@
                     Generative models trained with extremely few data samples (<em>e.g.,</em> n=10) strongly overfits, being able to produce only a limited set of <em>seen</em> data points. This results in <em>stairlike</em> latent space geometry,
                     under which gradual transition in the latent space results in discontinuous changes in the output (image) space. Thus, obtaining sample diversity is key to few-shot generative modeling while fidelity is a relatively low hanging fruit. <br>
                     In this work, instead of directly tackling the seemingly insurmountable problem of memorization, we set a surrogate objective of <em>smoothing</em> the generative latent space to enable sampling of diverse perceptually <em>in-between</em> samples.
-
+                    To that end, we intentionally generate an anchor sample by applying mixup in the latent space, and explicitly enforce the pairwise similarity distributions between the anchor sample and normal samples to follow the mixup coefficient. Intuitively,
+                    if we have four normal samples and mixup coefficient of (0.4, 0.3, 0.2, 0.1), the normalized pairwise similarities between the mixup sample and the rest should also roughly be (0.4, 0.3, 0.2, 0.1). We formulate this with intermediate feature cosine-similarities
+                    and Kullback-Leibler Divergence. Consult to the main paper for more details.
                 </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Quantitative Results
+                </h3>
+                <p>
+                    We compare our method with various competitive baselines on diverse benchmarks. We mainly use Frechet Inception Distance (FID), LPIPS, sFID, Precision and Recall for the evaluation metric.
+                </p>
+                <image src="img/Mixdl_tab1.png" class="img-responsive" alt="overview"></image>
+                <image src="img/Mixdl_tab2.png" class="img-responsive" alt="overview" width="80%"></image>
+                <image src="img/Mixdl_tab3.png" class="img-responsive" alt="overview"></image>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Qualitative Results
+                </h3>
+                <p>
+                    We present generated samples form ours and the baselines. As opposed to baselines that strictly generate memorized samples, MixDL enables sampling of novel unseen images.
+                </p>
+                <image src="img/Mixdl_qual1.png" class="img-responsive" alt="overview"></image>
+                <image src="img/Mixdl_qual2.png" class="img-responsive" alt="overview"></image>
             </div>
         </div>
 
