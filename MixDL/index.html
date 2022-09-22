@@ -152,43 +152,19 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    One-tower Contrastive Learning
+                    Stairlike Latent Space and Mixup-based Distance Learning (MixDL)
                 </h3>
-                <image src="img/TOWER.png" class="img-responsive" alt="overview">
+                <image src="img/stairlike.png" class="img-responsive" alt="overview">
                 <p>
-                    Vision-language models can be typically assigned to one of the four architecture prototypes. In this paper, we explore V-L representation learning with <em>single-tower</em> transformer, with a modality-agnostic transformer as well as generic projection layer.
-                    However, single-tower models struggle to embed information from two distant modalities (<em>i.e.,</em> image and text) due to the innate modality gap, as shown by the t-SNE plot below.
-                </p>
-                <image src="img/tsne.png" class="img-responsive" alt="overview">
-                <p>
-                    We observe that integrating cross-modal mixup contrastive (XMC) objective to the single-tower framework successfully mitigates the modality gap and enables unified representation learning. We take a step further to devise Contextual Invariance Contrastive (CIC) objective,
-                    that enforces the final representation formed from either using image or text as the context (<em>K, V in attention layers</em>) to be similar to each other. By combining the two, XMC anc CIC, we stabilize the single-tower unified representation learning and improve
-                    the representation quality compared to two-tower baselines (<em>e.g.,</em> CLIP) even with significantly less parameters.
+                    Generative models trained with extremely few data samples (<em>e.g.,</em> n=10) strongly overfits, being able to produce only a limited set of <em>seen</em> data points. This results in <em>stairlike</em> latent space geometry,
+                    under which gradual transition in the latent space results in discontinuous changes in the output (image) space. Thus, obtaining sample diversity is key to few-shot generative modeling while fidelity is a relatively low hanging fruit. <br>
+                    In this work, instead of directly tackling the seemingly insurmountable problem of memorization, we set a surrogate objective of <em>smoothing</em> the generative latent space to enable sampling of diverse perceptually <em>in-between</em> samples.
+
                 </p>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Intriguing Properties of One Representation (OneR)
-                </h3>
-                <image src="img/OneR_main.png" class="img-responsive" alt="overview"><br>
-                <p>
-                    As OneR treats individual image patch and text embedding as a generic unit of information and learns to attend between each other indifferently, we discover many interesting properties such as excellent zero-shot object localization, text-guided visual reasoning and multi-modal retrieval.
-                    For object localization, we do not rely on any specific algorithms like Grad-CAM, but simply computes patch-text embedding similarities and visualize the highlighted regions. Figure below presents a more vivid comparison with competitive baselines, which employ grad-cam as patch-level similarity operation yields highly unreasonable results.
-                </p>
-                <image src="img/OneR_compare.png" class="img-responsive" alt="overview">
-                <p>
-                    More than that, as OneR learns a single representation space for both vision and language modalities, it shows better cross-modal transfer (benefits in one modality performance after additional training in the other modality) than the baseline.
-                </p>
-                <image src="img/OneR_tab.png" class="img-responsive" alt="overview" width="70%">
-                    <p>
-                        Above all, OneR records highly comparable results on traditional benchmarks like COCO retrieval even with no initialization prior and significantly less number of parameters.
-                    </p>
-                    <image src="img/OneR_tab2.png" class="img-responsive" alt="overview">
-            </div>
-        </div>
+
 
 
 <!--        <div class="row">-->
