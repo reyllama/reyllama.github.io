@@ -50,6 +50,80 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <div class="one">
+                <img src='images/fashion-diffusion.png' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:top">
+              <a href="https://reyllama.github.io/Fashion-Diffusion">
+                <papertitle>Leveraging Off-the-shelf Diffusion Model for Multi-attribute Fashion Image Manipulation</papertitle>
+              </a>
+              <br>
+              <strong>Chaerin Kong</strong>,
+              <a href="https://scholar.google.com/citations?user=2kW3474AAAAJ&hl=ko">Donghyeon Jeon</a>,
+              <a href="https://www.linkedin.com/in/ohjoon-kwon-11b309170/?originalSubdomain=kr">Ohjoon Kwon</a>,
+              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>
+              <br>
+              <em>WACV</em>, 2023
+              <br>
+              <a href="https://arxiv.org/abs/2210.05872">arXiv</a>
+              <p></p>
+              <p>
+              We propose a mask-free fashion attribute editing framework that employs a pretrained diffuser and an efficiently finetuned guidance model.
+              </p>
+            </td>
+          </tr>
+
+        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <div class="one">
+                <img src='images/SMIR.png' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:top">
+              <papertitle>Self-distilled Self-supervised Representation Learning</papertitle>
+              <br>
+              <a href="https://www.linkedin.com/in/jiho-jang-58580b183/">Jiho Jang</a>,
+              <a href="https://www.linkedin.com/in/seonhoon-kim-b9511410b/">Seonhoon Kim*</a>,
+              <a href="http://mipal.snu.ac.kr/index.php/KiYoon_Yoo">KiYoon Yoo*</a>,
+              <strong>Chaerin Kong</strong>,
+              <a href="https://scholar.google.co.kr/citations?user=mzFEJVIAAAAJ&hl=ko">Jangho Kim</a>,
+              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>
+              <br>
+                <em>WACV</em>, 2023
+                <p></p>
+              <p>
+                By encouraging self-distillation from lower layer to upper layer in traditional SSL frameworks (e.g., SimCLR, MoCo, BYOL), we can improve the representation quality as confirmed by various downstream task performances.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <td style="padding:20px;width:25%;vertical-align:top">
+                <div class="one">
+                  <img src='images/CFNSG.jpg' width="160">
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:top">
+                <papertitle>Towards Efficient Neural Scene Graphs by Learning Consistency Fields</papertitle>
+                <br>
+                <a href="https://scholar.google.co.kr/citations?user=2bp69mwAAAAJ&hl=ko">Yeji Song</a>,
+                <strong>Chaerin Kong</strong>,
+                <a href="https://www.linkedin.com/in/seoyoung-lee-8b4036177/">Seo Young Lee</a>,
+                <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>,
+                <a href="http://www.joonseok.net/home.html">Joonseok Lee</a>
+                <br>
+                <em>BMVC</em>, 2022
+                <p></p>
+                <p>
+                  <a href="https://light.princeton.edu/publication/neural-scene-graphs/">Neural Scene Graphs</a> can be rendered more efficiently and in a more controllable manner by learning the consistency field of a given scene.
+                </p>
+              </td>
+            </tr>
+
           <tr onmouseout="malle_stop()" onmouseover="malle_start()">
             <td style="padding:20px;width:25%;vertical-align:top">
               <div class="one">
@@ -76,29 +150,6 @@
               <p></p>
               <p>
               Instead of directly combatting memorization for few-shot (n<100) image synthesis, we propose latent space smoothing regularizations that empower the generator to produce diverse (perceptually continuous) set of samples.
-              </p>
-            </td>
-          </tr>
-
-        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one">
-                <img src='images/CFNSG.jpg' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>Towards Efficient Neural Scene Graphs by Learning Consistency Fields</papertitle>
-              <br>
-              <a href="https://scholar.google.co.kr/citations?user=2bp69mwAAAAJ&hl=ko">Yeji Song</a>,
-              <strong>Chaerin Kong</strong>,
-              <a href="https://www.linkedin.com/in/seoyoung-lee-8b4036177/">Seo Young Lee</a>,
-              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>,
-              <a href="http://www.joonseok.net/home.html">Joonseok Lee</a>
-              <br>
-              <em>BMVC</em>, 2022
-              <p></p>
-              <p>
-                <a href="https://light.princeton.edu/publication/neural-scene-graphs/">Neural Scene Graphs</a> can be rendered more efficiently and in a more controllable manner by learning the consistency field of a given scene.
               </p>
             </td>
           </tr>
@@ -134,50 +185,6 @@
               <p></p>
               <p>
               We train a modality-agnostic Vision-Language model, OneR, and investigate intriguing properties of a unified V-L representation.
-              </p>
-            </td>
-          </tr>
-
-        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one">
-                <img src='images/fashion-diffusion.png' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <a href="https://reyllama.github.io/Fashion-Diffusion">
-                <papertitle>Leveraging Off-the-shelf Diffusion Model for Multi-attribute Fashion Image Manipulation</papertitle>
-              </a>
-              <br>
-              <strong>Chaerin Kong</strong>,
-              <a href="https://scholar.google.com/citations?user=2kW3474AAAAJ&hl=ko">Donghyeon Jeon</a>,
-              <a href="https://www.linkedin.com/in/ohjoon-kwon-11b309170/?originalSubdomain=kr">Ohjoon Kwon</a>,
-              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>
-              <p></p>
-              <p>
-              We propose a mask-free fashion attribute editing framework that employs a pretrained diffuser and an efficiently finetuned guidance model.
-              </p>
-            </td>
-          </tr>
-
-        <tr onmouseout="malle_stop()" onmouseover="malle_start()">
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one">
-                <img src='images/SMIR.png' width="160">
-              </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>Self-distilled Self-supervised Representation Learning</papertitle>
-              <br>
-              <a href="https://www.linkedin.com/in/jiho-jang-58580b183/">Jiho Jang</a>,
-              <a href="https://www.linkedin.com/in/seonhoon-kim-b9511410b/">Seonhoon Kim*</a>,
-              <a href="http://mipal.snu.ac.kr/index.php/KiYoon_Yoo">KiYoon Yoo*</a>,
-              <strong>Chaerin Kong</strong>,
-              <a href="https://scholar.google.co.kr/citations?user=mzFEJVIAAAAJ&hl=ko">Jangho Kim</a>,
-              <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">Nojun Kwak</a>
-              <p></p>
-              <p>
-                By encouraging self-distillation from lower layer to upper layer in traditional SSL frameworks (e.g., SimCLR, MoCo, BYOL), we can improve the representation quality as confirmed by various downstream task performances.
               </p>
             </td>
           </tr>
