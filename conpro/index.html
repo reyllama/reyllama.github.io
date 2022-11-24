@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ConPro</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://jonbarron.info/mipnerf/img/rays_square.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reyllama.github.io/conpro"/>
+    <meta property="og:title" content="Fashion-Diffusion" />
+    <meta property="og:description" content="Project page for Leveraging Off-the-shelf Diffusion Model for Multi-attribute Fashion Image Editing" />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="mip-NeRF" />
+    <meta name="twitter:description" content="Project page for Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields." />
+    <meta name="twitter:image" content="https://jonbarron.info/mipnerf/img/rays_square.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Conservative Generator, Progressive Discriminator:<br> Coordination of Adversaries in Few-shot Incremental Image Synthesis</br>
+<!--                <small>-->
+<!--                    ICCV 2021 (Oral, Best Paper Honorable Mention)-->
+<!--                </small>-->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://reyllama.github.io">
+                          Chaerin Kong
+                        </a>
+                        </br>Seoul National University
+                    </li>
+                    <li>
+                        <a href="http://mipal.snu.ac.kr/index.php/Nojun_Kwak">
+                          Nojun Kwak
+                        </a>
+                        </br>Seoul National University
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="img/main.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    The capacity to learn incrementally from an online stream of data is an envied trait of human learners, as deep neural networks typically suffer from catastrophic forgetting and stability-plasticity dilemma. Several works have previously explored incremental few-shot learning, a task with greater challenges due to data constraint, mostly in classification setting with mild success. In this work, we study the underrepresented task of generative incremental few-shot learning. To effectively handle the inherent challenges of incremental learning and few-shot learning, we propose a novel framework named ConPro that leverages the two-player nature of GANs. Specifically, we design a conservative generator that preserves past knowledge in parameter and compute efficient manner, and a progressive discriminator that learns to reason semantic distances between past and present task samples, minimizing overfitting with few data points and pursuing good forward transfer. We present experiments to validate the effectiveness of ConPro.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Incremental Few-shot Image Synthesis
+                </h3>
+                <p>
+                    There are two grave challenges in incremental few-shot training of a generative model. The fist is catastrophic forgetting that generally occurs in continual learning, and the second is limited sample diversity caused by strong overfitting. In ths work, we propose a systematic role allocation between the two players of GAN to overcome both at once.
+                </p>
+                <h3>
+                    Conservative Generator
+                </h3>
+                <p>
+                    We observe that in continual training of a GAN, the responsibility to retain past task knowledge only applies to the generator. Hence, we design Adaptive Factorized Modulation (AFM) that efficiently expands generator parameters upon encountering a new task. This way, generator can perfectly maintain its past generative capacity, which is in turn used to train a progressive discriminator.
+                </p>
+                <h3>
+                    Progressive Discriminator
+                </h3>
+                <p>
+                    As discriminator is fundamentally free from the threat of forgetting, we mainly encourage it to combat overfitting by incorporating distance learning. Specifically, we leverage the conservative generator as the generative replay, and additionally train our discriminator with supervised contrastive objective (SupCon) to prevent unnatural memorization and extreme gradient signals. Note that our SupCon loss relies on the generator's ability to produce past task samples of good quality. As our discriminator is trained to evaluate semantic distances between samples of different classes, we further employ this quality to initialize the modulation parameters of the generator for an incoming task with the most relevant past task weights.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Qualitative Results
+                </h3>
+                <image src="img/qual.png" class="img-responsive" alt="overview"><br>
+                <image src="img/interp.png" class="img-responsive" alt="overview" width="80%" align="center"><br>
+            </div>
+        </div>
+        
+            
+<!--        <div class="row">-->
+<!--            <div class="col-md-8 col-md-offset-2">-->
+<!--                <h3>-->
+<!--                    Citation-->
+<!--                </h3>-->
+<!--                <div class="form-group col-md-10 col-md-offset-1">-->
+<!--                    <textarea id="bibtex" class="form-control" readonly>-->
+<!--@article{barron2021mipnerf,-->
+<!--    title={Mip-NeRF: A Multiscale Representation -->
+<!--           for Anti-Aliasing Neural Radiance Fields},-->
+<!--    author={Jonathan T. Barron and Ben Mildenhall and -->
+<!--            Matthew Tancik and Peter Hedman and -->
+<!--            Ricardo Martin-Brualla and Pratul P. Srinivasan},-->
+<!--    journal={ICCV},-->
+<!--    year={2021}-->
+<!--}</textarea>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-8 col-md-offset-2">-->
+<!--                <h3>-->
+<!--                    Acknowledgements-->
+<!--                </h3>-->
+<!--                <p class="text-justify">-->
+<!--                We thank Janne Kontkanen and David Salesin for their comments on the text, Paul Debevec for constructive discussions, and Boyang Deng for JaxNeRF. -->
+<!--                    <br>-->
+<!--                MT is funded by an NSF Graduate Fellowship.-->
+<!--                    <br>-->
+<!--                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</body>
+</html>
