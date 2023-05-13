@@ -127,12 +127,19 @@
                 </h3>
 <!--                <image src="img/pipeline.jpeg" class="img-responsive" alt="overview"><br>-->
                 <p class="text-justify">
-                    Recent advances in diffusion models have showcased promising results in the text-to-video (T2V) synthesis task.
-                    However, as these T2V models solely employ text as the guidance, they tend to struggle in modeling detailed temporal dynamics.
-                    In this paper, we introduce a novel T2V framework that additionally employ audio signals to control the temporal dynamics,
-                    empowering an off-the-shelf T2I diffusion to generate audio-aligned videos. We propose audio-based regional editing and
-                    signal smoothing to strike a good balance between the two contradicting desiderata of video synthesis, i.e., temporal flexibility and coherence.
-                    We empirically demonstrate the effectiveness of our method through experiments, and further present practical applications for contents creation.
+                    Transformers have demonstrated tremendous success not only in the natural language
+processing (NLP) domain but also the field of computer vision, igniting various creative
+approaches and applications. Yet, the superior performance and modeling flexibility of
+transformers came with a severe increase in computation costs, and hence several works
+have proposed methods to reduce this burden. Inspired by a cost-cutting method origi-
+nally proposed for language models, Data Multiplexing (DataMUX), we propose a novel
+approach for efficient visual recognition that employs additional dim1 batching (i.e., con-
+catenation) that greatly improves the throughput with little compromise in the accuracy.
+We first introduce a naive adaptation of DataMux for vision models, Image Multiplexer,
+and devise novel components to overcome its weaknesses, rendering our final model,
+ConcatPlexer, at the sweet spot between inference speed and accuracy. The ConcatPlexer
+was trained on ImageNet1K and CIFAR100 dataset and it achieved 23.5% less GFLOPs
+than ViT-B/16 with 69.5% and 83.4% validation accuracy, respectively
                 </p>
             </div>
         </div>
