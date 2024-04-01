@@ -171,52 +171,34 @@
                     We choose StyleGAN-Human (<em>Fu and Li et al. (2022)</em>) as our generative prior, for its impressive capacity for whole human image generation.
                 </p>
                 <br>
-                <image src="img/fig5.jpg" class="img-responsive" alt="overview">
+                <p>
+                    Upon this pretrained human generation system, we envision something like StyleCLIP (<em>Patashnik et al. (2021)</em>).
+                    Hence, we initially run experiments with naive StyleCLIP latent-mapper implementation with little success as illustrated below.
+                </p>
+                <br>
+                <image src="img/fig2_1.png" class="img-responsive" alt="overview">
                 <br>
                 <p>
-                    <em>5. CAP is a more indirect if not challenging form of supervision than ITC or ITM.</em>
+                    We find that the existing text-driven editing methods fall short for our problem due to their overly simplified guidance signal.
+                    To address this, we propose two directions to reinforce the guidance: textual augmentation and visual referencing.
+                    The former involves generating additional text descriptions to enrich the guidance signal, while the latter involves providing visual references to the model by retrieving relevant images from our fashion database.
+                    These two strategies successfully enhance the guidance signal and enable fashion style editing, as shown below.
                 </p>
+                <br>
+                <image src="img/fig2_2.png" class="img-responsive" alt="overview">
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    New Baseline: Guidance Shift
+                    Experiments
                 </h3>
-                <p>
-                    Based on the above findings, we propose a simple yet effective modification to the previous regime that takes advantage of both ends.
-                    Specifically, we start from <em>CAP</em> guidance to outline the overall scene structure and gradually shift towards <em>ITC</em> for refined details.
-                    We compare this with naive baselines, simple <em>ITC</em>, simple <em>CAP</em> and <em>BLEND</em>, where we use these two signals but simply mix them without the gradual transition.
-                    We report both qualitative and quantitative human evaluations. Ours not only supports our empirical insights but also improves complex scene generation in an extremely straightforward manner.
-                </p>
-                <image src="img/fig7.jpg" class="img-responsive" alt="overview">
-                    <br>
-                <image src="img/fig6.jpg" class="img-responsive" alt="overview">
+
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Additional Results
-                </h3>
-                <p>
-                    We hereby display additional examples that further clarifies our analysis.
-                </p>
-                <image src="img/sup1.jpg" class="img-responsive" alt="overview">
-                    <br>
-                <image src="img/sup2.jpg" class="img-responsive" alt="overview">
-                <br>
-                <p>As opposed to <em>ITC</em> that generates realistic samples but the output severely oscillate even with minor typos, dense supervisions shows much better robustness, which can come in handy in a typical V-L setting
-                where we rely on a massive web-crawled noisy image-text database.</p>
-                <br>
-                <image src="img/sup4.jpg" class="img-responsive" alt="overview">
-                    <br>
-                <image src="img/sup3.jpg" class="img-responsive" alt="overview">
-                    <br><br>
-            </div>
-        </div>
+
 
 
 <!--        <div class="row">-->
