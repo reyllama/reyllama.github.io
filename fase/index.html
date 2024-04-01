@@ -176,7 +176,7 @@
                     Hence, we initially run experiments with naive StyleCLIP latent-mapper implementation with little success as illustrated below.
                 </p>
                 <br>
-                <image src="img/fig2_1.png" class="img-responsive" alt="overview">
+                <image src="img/fig2_1.png" class="img-responsive" alt="overview"></image>
                 <br>
                 <p>
                     We find that the existing text-driven editing methods fall short for our problem due to their overly simplified guidance signal.
@@ -185,7 +185,7 @@
                     These two strategies successfully enhance the guidance signal and enable fashion style editing, as shown below.
                 </p>
                 <br>
-                <image src="img/fig2_2.png" class="img-responsive" alt="overview">
+                <image src="img/fig2_2.png" class="img-responsive" alt="overview"></image>
             </div>
         </div>
 
@@ -194,47 +194,29 @@
                 <h3>
                     Experiments
                 </h3>
-
+                <image src="img/fig5.jpg" class="img-responsive" alt="overview"></image>
+                <br>
+                <p>
+                    Evident from the above figure, our FaSE framework successfully projects abstract fashion concepts with minimal irrelevant modification to the base image.
+                    We can see that applying naive StyleCLIP method to fashion domain fails in visualizing high-level target concepts.
+                </p>
+                <br>
+                <image src="img/fig4.jpg" class="img-responsive" alt="overview"></image>
+                <br>
+                <p>
+                    We further share insights on the latent space structure of StyleGAN-Human. 
+                    When we compartmentalize the <em>W+</em> space into three sections as done in StyleCLIP, we empirically discover that 
+                    mid and fine layers mostly contribute to fashion style editing, while the coarse layer is mainly responsible for the posture of the generated human.
+                    Among these two, the mid layer is more sensitive to the high-level fashion concepts (<em>e.g., 'formal'</em>), while the fine layer is more sensitive to texture details (<em>e.g., 'blue color'</em>).
+                </p>
+                <br>
             </div>
         </div>
 
 
 
 
-<!--        <div class="row">-->
-<!--            <div class="col-md-8 col-md-offset-2">-->
-<!--                <h3>-->
-<!--                    Citation-->
-<!--                </h3>-->
-<!--                <div class="form-group col-md-10 col-md-offset-1">-->
-<!--                    <textarea id="bibtex" class="form-control" readonly>-->
-<!--@article{barron2021mipnerf,-->
-<!--    title={Mip-NeRF: A Multiscale Representation -->
-<!--           for Anti-Aliasing Neural Radiance Fields},-->
-<!--    author={Jonathan T. Barron and Ben Mildenhall and -->
-<!--            Matthew Tancik and Peter Hedman and -->
-<!--            Ricardo Martin-Brualla and Pratul P. Srinivasan},-->
-<!--    journal={ICCV},-->
-<!--    year={2021}-->
-<!--}</textarea>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
 
-<!--        <div class="row">-->
-<!--            <div class="col-md-8 col-md-offset-2">-->
-<!--                <h3>-->
-<!--                    Acknowledgements-->
-<!--                </h3>-->
-<!--                <p class="text-justify">-->
-<!--                We thank Janne Kontkanen and David Salesin for their comments on the text, Paul Debevec for constructive discussions, and Boyang Deng for JaxNeRF. -->
-<!--                    <br>-->
-<!--                MT is funded by an NSF Graduate Fellowship.-->
-<!--                    <br>-->
-<!--                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 </body>
 </html>
